@@ -3,6 +3,8 @@ package edu.kh.basic;
 
 //주석을 다는 방식이다. 해당 방식을 활용하면 죽은 코드를 작성할 수 있다.
 
+//test
+
 
 public class JavaTest {
 	public static void main(String[] args) {
