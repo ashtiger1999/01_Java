@@ -80,7 +80,7 @@ public class PrintExample {
 		// \t : tab (한 공간씩 표현 X, 한번에 공간 차지)
 		System.out.println("a\tb\tc\td");
 		// 유니코드 이스케이프
-		System.out.println("\u0041");
+		System.out.println("\u0041"); //A, 유니코드=16진수, 65의 16진수 = 0041
 		
 
 	}

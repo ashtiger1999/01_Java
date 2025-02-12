@@ -9,10 +9,10 @@ public class VariableExample2 {
 		 * 
 		 * 논리형 : boolean(1byte)
 		 * 정수형 : byte(1byte), short(2byte), int(4byte), long(8byte)
-		 * 실수형 : float(4byte), double(byte)
+		 * 실수형 : float(4byte), double(8byte)
 		 * 문자형 : char(2byte, 유니코드)
 		 * 
-		 * 참조형 - 문자열 String
+		 * 참조형 - 문자열 String(4byte)
 		*/
 		
 		/*
