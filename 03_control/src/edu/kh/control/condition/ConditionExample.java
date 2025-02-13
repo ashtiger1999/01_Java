@@ -182,12 +182,13 @@ public class ConditionExample {
 		System.out.print("Age : ");
 		age=sc.nextInt();
 		
-		if (age>100||age<0) result="Err";
+		if (age>100||age<0) result="Err : Age";
 		else {
 			System.out.print("Height : ");
 			hei=sc.nextDouble();
 			
-			if (age>=12&&hei>=140.0) result="Access";
+			if (hei>250.0||hei<0) result="Err : Height"; 
+			else if (age>=12&&hei>=140.0) result="Access";
 			else if(age<12&&hei>=140.0)	result="Not Allowed : Age";
 			else if(age>=12&&hei<140.0) result="Not Allowed : Height";
 			else result="Not Allowed";			
@@ -195,4 +196,42 @@ public class ConditionExample {
 		
 		System.out.println(result);
 	}
+
+	public void ex9() {
+		// switch 문
+		// 여러 case 중 하나를 선택하여 수행하는 조건문
+		
+		// 요일 번호 입력 (1~7) : 3
+		// 수요일
+		
+		System.out.print("요일 번호 입력 : ");
+		int day = sc.nextInt();
+		
+		switch(day) {
+		case 1 : System.out.println("mon"); break;
+		case 2 : System.out.println("tue"); break;
+		case 3 : System.out.println("wen"); break;
+		case 4 : System.out.println("tur"); break;
+		case 5 : System.out.println("fri"); break;
+		case 6 : System.out.println("sat"); break;
+		case 7 : System.out.println("sun"); break;
+		default : System.out.println("err");
+		}
+	}
+
+	public void ex10() {
+		// 점수 범위를 벗어난 것은 생각하지 않는다.
+		System.out.print("점수 입력(0~100) : ");
+		int score = sc.nextInt();
+		
+		switch(score/10) {
+		case 10:
+		case 9: System.out.println("a"); break;
+		case 8: System.out.println("b"); break;
+		case 7: System.out.println("c"); break;
+		case 6: System.out.println("d"); break;
+		default: System.out.println("f");
+		}
+	}
+
 }
