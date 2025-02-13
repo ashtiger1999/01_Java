@@ -67,7 +67,7 @@ public class OperatorPractice {
 		int kr;
 		int en;
 		int math;
-		double sum;
+		int sum;
 		double avg;//average
 		
 		Scanner sc = new Scanner(System.in);
@@ -82,7 +82,7 @@ public class OperatorPractice {
 		math = sc.nextInt();
 		
 		sum = kr+en+math;
-		avg = sum/3;
+		avg = sum/3.0;
 		
 		System.out.println("Sum : "+sum);
 		System.out.printf("Average : %.1f",avg);

@@ -22,7 +22,11 @@ public class PracticeRun {
 		
 		OperatorPractice3 opPrc3 = new OperatorPractice3();
 		
-		opPrc3.practice1();
+//		opPrc3.practice1();
+		
+//		opPrc3.practice2();
+		
+		opPrc3.practice3();
 		
 	}
 
