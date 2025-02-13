@@ -60,18 +60,9 @@ public class ConditionPractice {
 		month=sc.nextInt();
 		
 		switch(month) {
-		case 1 : result="31 days"; break;
+		case 1,3,5,7,8,10, 12 : result="31 days"; break;
 		case 2 : result="28 days"; break;
-		case 3 : result="31 days"; break;
-		case 4 : result="30 days"; break;
-		case 5 : result="31 days"; break;
-		case 6 : result="30 days"; break;
-		case 7 : result="31 days"; break;
-		case 8 : result="31 days"; break;
-		case 9 : result="30 days"; break;
-		case 10 : result="31 days"; break;
-		case 11 : result="30 days"; break;
-		case 12 : result="31 days"; break;
+		case 4,6,9,11 : result="30 days"; break;
 		
 		default : result="Err Code : Month";
 		}
@@ -115,11 +106,11 @@ public class ConditionPractice {
 		double sum;
 		String result="pass";
 		
-		System.out.print("Middle Term Exam Score : ");
+		System.out.print("Middle Term Score : ");
 		mid=sc.nextDouble();
 		mid*=0.2;
 		
-		System.out.print("Final Term Exam Score : ");
+		System.out.print("Final Term Score : ");
 		fin=sc.nextDouble();
 		fin*=0.3;
 		
@@ -140,8 +131,8 @@ public class ConditionPractice {
 		}
 		else {
 			if(sum<70) result="fail : Under the Cutline";
-			System.out.printf("Middle Term Exam(20) : %.1f\n",mid);		
-			System.out.printf("Final Term Exam(30) : %.1f\n",fin);		
+			System.out.printf("Middle Term(20) : %.1f\n",mid);		
+			System.out.printf("Final Term(30) : %.1f\n",fin);		
 			System.out.printf("Homework(30) : %.1f\n",wrk);		
 			System.out.printf("Attendance(20) : %d\n",att);		
 			System.out.printf("Sum : %.1f\n",sum);		
