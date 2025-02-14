@@ -10,7 +10,6 @@ public class UseForToReverseNumber {
 		
 		for(; num>1; num/=10) {
 			rest=num%10;
-			
 			reverse=reverse*10+rest;
 		}
 		System.out.println(reverse);

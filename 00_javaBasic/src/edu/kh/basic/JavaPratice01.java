@@ -16,7 +16,5 @@ public class JavaPratice01 {
 			dan++;
 			System.out.println();
 		}
-		
 	}
-
 }

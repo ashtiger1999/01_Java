@@ -11,8 +11,6 @@ public class JavaPractice02 {
 				System.out.println(dan+" * "+times+" = "+dan*times);
 			}
 			System.out.println();
-
 		}
 	}
-
 }

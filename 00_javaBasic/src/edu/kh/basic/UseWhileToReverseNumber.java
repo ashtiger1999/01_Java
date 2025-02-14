@@ -8,15 +8,11 @@ public class UseWhileToReverseNumber {
 		int reverse=0;
 		
 		while(num>0) {
-			
 			int rest=num%10;
 			reverse=reverse*10+rest;
 			
 			num=num/10;
-			
 		}
-		
 		System.out.println(reverse);
 	}
-
 }
