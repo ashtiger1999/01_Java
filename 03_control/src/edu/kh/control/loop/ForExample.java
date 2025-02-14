@@ -96,10 +96,35 @@ public class ForExample {
 				count++;
 			}
 		}
-		
 		System.out.println(": "+count);
-		System.out.println("sum : "+sum);
-		
+		System.out.println("sum : "+sum);	
 	}
 	
+	public void ex8() {
+		// 구구단
+				
+		for(int dan=9; dan>=2; dan--) {
+			for(int times=1; times<=9; times++) {
+				System.out.printf("%d x %d = %2d  ",dan,times,dan*times);
+			}
+			System.out.println();
+		}
+	}
+	
+	public void ex0() {
+		
+		System.out.print("number : ");
+		int num=sc.nextInt();
+		String result="is prime number";
+		if (num==1) 
+			result="is not prime number.";
+		for(int i=2; i<num; i++) {
+			
+			if(num%i==0) 
+				result="is not prime number."; break;
+
+		}
+		System.out.println(num+" "+result);
+		
+	}
 }
