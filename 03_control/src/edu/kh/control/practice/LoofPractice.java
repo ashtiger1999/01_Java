@@ -206,4 +206,75 @@ public class LoofPractice {
 		}
 		
 	}
+
+	public void prc15() {
+		
+		System.out.print("input 1 : ");
+		int num1=sc.nextInt();
+		System.out.print("input 2 : ");
+		int num2=sc.nextInt();
+		
+		if(num1>num2) {
+			int restore=num2;
+			num2=num1;
+			num1=restore;
+		}
+		
+		for(int i=1; i<=num2-num1; i++) {
+			int result=num1+i;
+			if(result%2==0) System.out.print(result+" ");
+		}
+	}
+	
+	public void prc16() {
+		
+		System.out.print("input : ");
+		int n=sc.nextInt();
+		
+		int count=0;
+		
+		for(int i=1; i<=n; i++) {
+			if(n%i==0) {
+				System.out.print(i+" ");
+				count++;
+			}
+		}
+		if(count==0) System.out.println("약수가 없습니다.");
+	}
+
+	public void prc17() {
+		
+		System.out.print("input : ");
+		int num=sc.nextInt();
+		
+		int sum=0;
+		
+		for(int i=1; i<num; i++) if(num%i==0) sum=sum+i;
+		
+		if(sum==num) System.out.println(num+"은 완전수입니다.");
+		else System.out.println(num+"은 완전수가 아닙니다.");
+	}
+
+	public void prc18() {
+		
+		System.out.print("input : ");
+		int num=sc.nextInt();
+		
+		if(num<=1) System.out.println("소수의 합은 0입니다.");
+		else {
+			int count=0;
+			int sum=0;
+			for(int d=1; d<=num; d++) {
+				for(int i=1; i<=num; i++) {
+					if(num%i==0) {
+						count++;
+						System.out.print(i+" ");
+					}
+				}
+				if(count==2) sum=sum+num;
+			}
+			System.out.println(sum);
+		}
+	}
+
 }
