@@ -328,4 +328,22 @@ public class ArrayExample1 {
 		
 	}
 
+	public void ex10() {
+		
+		System.out.print("문자열 : ");
+		String str=sc.nextLine();
+		
+		char[] arr=new char[str.length()];
+		for (int i=0; i<str.length(); i++) arr[i]=str.charAt(i);
+		System.out.println(Arrays.toString(arr));
+		
+		System.out.print("검색할 문자 : ");
+		char ch=sc.next().charAt(0);
+		
+		int count=0;
+		for (int i=0; i<arr.length; i++) if(arr[i]==ch) count++;
+		if(count>0)System.out.println(count+"개 있음");
+		else System.out.println("없음");
+		
+	}
 }
