@@ -276,5 +276,18 @@ public class LoofPractice {
 			System.out.println(sum);
 		}
 	}
+	
+	public void prc19() {
+		
+		System.out.print("input : ");
+		int num=sc.nextInt();
+		
+		for(int col=1; col<=num; col++) {
+			for(int row=0; row<=num-col; row++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
 
 }

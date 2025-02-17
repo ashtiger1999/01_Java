@@ -120,9 +120,9 @@ public class ForExample {
 			result="is not prime number.";
 		for(int i=2; i<num; i++) {
 			
-			if(num%i==0) 
+			if(num%i==0) {
 				result="is not prime number."; break;
-
+			}
 		}
 		System.out.println(num+" "+result);
 		
