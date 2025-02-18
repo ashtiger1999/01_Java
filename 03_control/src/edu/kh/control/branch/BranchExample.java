@@ -191,4 +191,66 @@ public class BranchExample {
 		}
 	}
 
+	public void rsp() {
+		
+		System.out.println("[rsp game]");
+		System.out.print("coin : ");
+		int coin=sc.nextInt();
+		
+		while (coin<=0) {
+			System.err.println("Err : coin\n");
+			
+			System.out.println("[rsp game]");
+			System.out.print("coin : ");
+			coin=sc.nextInt();
+		}
+		System.out.println();
+		
+		int win=0;
+		int lose=0;
+		int draw=0;
+		String result="";
+		
+		for(int i=1; i<=coin; i++) {
+			System.out.println("round : "+i);
+			System.out.print("select : ");
+			String select=sc.next();
+			
+			if(!(select.equals("가위")||select.equals("바위")||select.equals("보"))){
+				System.err.println("Err : select\n");
+				i--;
+				continue;
+			}
+			
+			
+			int random=(int)(Math.random()*3);
+			String com="";
+			switch(random){
+				case 0:com="가위"; break;
+				case 1:com="바위"; break;
+				case 2:com="보"; break;
+			}
+			
+			if(select.equals(com)) {
+				draw++;
+				result="DRAW";
+			}
+			else {
+				boolean win1=select.equals("가위")&&com.equals("보");
+				boolean win2=select.equals("바위")&&com.equals("가위");
+				boolean win3=select.equals("보")&&com.equals("바위");
+				if(win1||win2||win3) {
+					win++;
+					result="WIN";
+				}
+				else {
+					lose++;
+					result="LOSE";
+				}
+			}
+			System.out.println("com : "+com);
+			System.out.println(result);
+			System.out.printf("win : %d lose : %d draw : %d\n\n",win,lose,draw);
+		}
+	}
 }

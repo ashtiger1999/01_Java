@@ -5,7 +5,7 @@ public class BranchRun {
 	public static void main(String[] args) {
 
 		BranchExample brEx=new BranchExample();
-		brEx.RSP();
+		brEx.rsp();
 		
 	}
 
