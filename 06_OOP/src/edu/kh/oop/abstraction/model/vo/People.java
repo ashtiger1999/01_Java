@@ -142,7 +142,17 @@ public class People { // 국민 (사람) 클래스
 	}
 
 	public void setMyAge(int myAge) {
-		this.myAge = myAge;
+		// 메서드(기능) 형태인 getter/setter를 이용하면 본인이 원하는 기능을 추가할 수 있음
+		// age가 0보다 크지 않을 때, 예외 발생 시키기
+		// age가 0보다 클 때, 속성값에 전달받은 값 세팅하기
+		if(myAge>0) {
+			this.myAge = myAge;
+		} 
+		else {
+			throw new IllegalArgumentException("0 이하 입니다.");
+			// IllegalArgumentException
+			// 메서드에 전달된 인자가(매개변수)유효하지 않을 때 발생하는 예외
+		}
 	}
 	
 	
