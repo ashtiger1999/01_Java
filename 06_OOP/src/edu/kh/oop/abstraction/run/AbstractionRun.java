@@ -8,7 +8,7 @@ public class AbstractionRun { // 실행용 클래스
 
 		// 서비스 클래스 객체 생성
 		AbstractionService abServ = new AbstractionService();
-		
+
 		// 객체에서 ex1() 메서드 실행
 		abServ.ex1();
 

@@ -47,12 +47,14 @@ public class People { // 국민 (사람) 클래스
 		System.out.println("투표를 합니다.");
 	}
 	
+	
 	// 캡슐화에서 사용할 간접 접근 기능 (getter/setter)
 	// [접근 제한자] 반환령 메서드명() {}
 	
 	// name 변수의 값을 호출한 쪽으로
 	// 돌려보내주는 간접 접근 기능 중 getter
 	
+	// setter()
 	public String getName() {
 		return name;
 		// return; : 현재 메서드를 종료하고 호출한 쪽으로 되돌아감
@@ -85,6 +87,63 @@ public class People { // 국민 (사람) 클래스
 	
 	public int getAge() {return age;}
 	public void setAge(int age) {this.age=age;}
+	
+	// 자동완성 : alt + shift + s/generate getters and setters
+	
+	private String myName;
+	private char myGender;
+	private String mypNo;
+	private String myAddress;
+	private String myPhone;
+	private int myAge;
+
+	public String getMyName() {
+		return myName;
+	}
+
+	public void setMyName(String myName) {
+		this.myName = myName;
+	}
+
+	public char getMyGender() {
+		return myGender;
+	}
+
+	public void setMyGender(char myGender) {
+		this.myGender = myGender;
+	}
+
+	public String getMypNo() {
+		return mypNo;
+	}
+
+	public void setMypNo(String mypNo) {
+		this.mypNo = mypNo;
+	}
+
+	public String getMyAddress() {
+		return myAddress;
+	}
+
+	public void setMyAddress(String myAddress) {
+		this.myAddress = myAddress;
+	}
+
+	public String getMyPhone() {
+		return myPhone;
+	}
+
+	public void setMyPhone(String myPhone) {
+		this.myPhone = myPhone;
+	}
+
+	public int getMyAge() {
+		return myAge;
+	}
+
+	public void setMyAge(int myAge) {
+		this.myAge = myAge;
+	}
 	
 	
 	

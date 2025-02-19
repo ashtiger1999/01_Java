@@ -60,7 +60,7 @@ public class AbstractionService {
 		p1.setGender('남');
 		System.out.println(p1.getGender());
 		
-		p1.setpNo("990011-1234567");
+		p1.setpNo("123456-1234567");
 		System.out.println(p1.getpNo());
 		
 		p1.setAddress("서울시 중구 남내문로 120");
@@ -69,7 +69,53 @@ public class AbstractionService {
 		p1.setPhone("010-1234-5678");
 		System.out.println(p1.getPhone());
 		
-		p1.setAge(27);
+		p1.setAge(20);
 		System.out.println(p1.getAge());
+		
+		System.out.println();
+		
+		// 본인 객체
+		// People 클래스를 이용하여 본인 이름 객체 생성하기
+		// 본인의 정보 setter 값 대입
+		// getter 이용해서 콘솔창 출력까지
+		
+		
+		People p2 = new People();
+				
+		p2.setMyName("허재호");
+		p2.setMyGender('남');
+		p2.setMypNo("990809-1234567");
+		p2.setMyAddress("인천광역시 연수구 한나루로 105번길 68");
+		p2.setMyPhone("010-2616-4095");
+		p2.setMyAge(27);
+		
+		System.out.println(p2.getMyName());
+		System.out.println(p2.getMyGender());
+		System.out.println(p2.getMypNo());
+		System.out.println(p2.getMyAddress());
+		System.out.println(p2.getMyPhone());
+		System.out.println(p2.getMyAge());
+		
+		System.out.println();
+		
+		p2.setName("김연진");
+		System.out.println(p2.getName());
+		
+		p2.setGender('여');
+		System.out.println(p2.getGender());
+		
+		p2.setpNo("123456-1234567");
+		System.out.println(p2.getpNo());
+		
+		p2.setAddress("인천광역시 연수구");
+		System.out.println(p2.getAddress());
+		
+		p2.setPhone("010-1234-5678");
+		System.out.println(p2.getPhone());
+		
+		p2.setAge(20);
+		System.out.println(p2.getAge());
+		
+		System.out.println();
 	}
 }
