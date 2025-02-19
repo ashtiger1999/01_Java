@@ -128,6 +128,7 @@ public class PracticeService {
 		}
 	}
 
+	// do - while문 사용
 	public void practice8() {
 		
 		int num=0;
@@ -146,11 +147,47 @@ public class PracticeService {
 		}
 	}
 	
-	public void practice9_1() {
+	// while(true) 사용
+	public void practice8_1() {
 		
-		System.out.print("정수 : ");
-		int num=sc.nextInt();
-		if(num<3||num%2==0) {
+		while (true) {
+			// 3 이상의 수가 입력 될 때 까지 무한 반복
+			// -> 3 이상 홀수가 입력되면 원하는 코드 수행 후 break문 으로 종료 예정
+
+			System.out.print("정수 : ");
+			int input = sc.nextInt();
+
+			if (input < 3 || input % 2 == 0) { // 3 미만 또는 짝수인 경우 -> 반복
+				System.out.println("다시 입력하세요!");
+
+			} else {
+				// 입력 받은 정수 만큼의 크기를 가지는 배열 생성
+				int[] arr = new int[input];
+
+				int num = 0; // arr 배열에 대입될 값
+
+				for (int i = 0; i < arr.length; i++) {
+
+					// 요소에 값 대입하기
+					if (i <= arr.length / 2) { // 중간 이전까지 -> 증가
+						arr[i] = ++num;
+					} else { // 중간 이후 -> 감소
+						arr[i] = --num;
+					}
+
+					// 각 요소에 대입된 값 출력하기
+					// 출력 시 , 추가 (단, 마지막 제외)
+					if (i == arr.length - 1) { // 마지막 바퀴
+						System.out.print(arr[i]);
+					} else {
+						System.out.print(arr[i] + ", ");
+					}
+
+				} // for문끝
+
+				break; // while 반복 멈춤
+
+			}
 			
 		}
 		
@@ -200,6 +237,7 @@ public class PracticeService {
 
 	}
 
+	// lotto번호 생성기
 	public void practice12() {
 		int[] lotto=new int[6];
 		for(int i=0; i<lotto.length; i++) {
@@ -210,6 +248,7 @@ public class PracticeService {
 		for(int i=0; i<lotto.length; i++) System.out.print(lotto[i]+" ");
 	}
 	
+	// 문자열을 사전순 정돈하고 출력
 	public void practice13() {
 		System.out.print("문자열 : ");
 		String str=sc.next();
@@ -240,6 +279,7 @@ public class PracticeService {
 
 	}
 	
+	// 문자열을 사전순 정돈하지 않고 출력
 	public void practice13_1() {
 		System.out.print("문자열 : ");
 		String str=sc.nextLine();
@@ -265,32 +305,51 @@ public class PracticeService {
 		System.out.println("\n문자 개수 : "+count);
 	}
 	
+	// 처음부터 중복된 문자는 char 배열에 넣지 않는 방식
 	public void practice13_2() {
-		System.out.print("문자열 입력 : ");
-		String str=sc.nextLine();
-		
-		int count=0;
-		
-		char[] arr=new char[str.length()];
-		for(int i=0; i<arr.length; i++) {
-			arr[i]=(char)str.charAt(i);
-			for(int e=0; e<i; e++) {
-				if(arr[e]==arr[i]) {
-					count++;
+		// 1. 사용자에게 문자열 입력받기
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+
+		// 2. 중복 없이 저장할 char 배열 선언 (최대 str.length() 크기)
+		char[] arr = new char[str.length()];
+		int count = 0; // 실제로 배열에 저장된 문자 개수
+
+		// 3. 문자열을 한 글자씩 탐색하면서 중복이 없으면 배열에 추가
+		for (int i = 0; i < str.length(); i++) {
+			char currentChar = str.charAt(i);
+			boolean isDuplicate = false;
+
+			// 4. 현재 문자가 이미 배열에 존재하는지 확인
+			for (int j = 0; j < count; j++) {
+				if (arr[j] == currentChar) {
+					isDuplicate = true;
 					break;
 				}
 			}
+
+			// 5. 중복이 아니라면 배열에 추가
+			if (!isDuplicate) {
+				arr[count] = currentChar;
+				count++;
+			}
 		}
-		char[] result=new char[arr.length];
-		for(int i=0; i<arr.length; i++) {
-			// 중복되지 않은 글자들을 result에 모으고 싶어 result[i]=;
+
+		// 6. 결과 출력
+		System.out.print("문자열에 있는 문자 : ");
+		for (int i = 0; i < count; i++) {
+			if (i == 0) {
+				System.out.print(arr[i]);
+			} else {
+				System.out.print(", " + arr[i]);
+			}
 		}
-		Arrays.sort(arr);
-		
-		
-		
+		System.out.println();
+		System.out.println("문자 개수 : " + count);
+			
 	}
 
+	// toLowerCase를 이용하여 대소문자 구분없이 일치여부를 판단
 	public void practice14() {
 		System.out.print("배열의 크기를 입력하세요 : ");
 		int num=sc.nextInt();
@@ -334,6 +393,8 @@ public class PracticeService {
 		}while(again);
 		System.out.println(Arrays.toString(arr));
 	}
+	
+	// 불필요한 변수를 제거하여 코드 길이를 단순화
 	public void practice14_1() {
 		System.out.print("배열의 크기를 입력하세요 : ");
 		int num=sc.nextInt();
@@ -378,6 +439,7 @@ public class PracticeService {
 		System.out.println(Arrays.toString(arr));
 	}
 	
+	// ||를 활용하여 대소문자 각각 일치여부를 판단
 	public void practice14_2() {
 		
 		System.out.print("배열의 크기를 입력하세요 : ");
@@ -414,6 +476,7 @@ public class PracticeService {
 		System.out.println(Arrays.toString(arr));
 	}
 	
+	// newArr 배열을 사용하여 기존 배열에 추가할 문자열 배열을 생성
 	public void practice14_3() {
 		
 		System.out.print("배열의 크기를 입력하세요 : ");
