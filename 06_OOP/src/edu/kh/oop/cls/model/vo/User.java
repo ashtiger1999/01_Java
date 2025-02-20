@@ -45,7 +45,8 @@ public class User {
 		this.userGender = userGender;
 	}	
 	
-	// 기본 생성자
+	// 기본 생성자 단축키 ctrl + shift + enter
+	// 기본 생성자 ( -> 매개변수가 없는 생성자)
 	public User() {
 		// 기능
 		System.out.println("기본 생성자로 User 객체 생성");
@@ -58,6 +59,8 @@ public class User {
 		userGender='남';
 	}
 	
+	
+	// 매개변수 생성자 단축키 alt + shift + s / Generate Constructor using field
 	// 매개변수 생성자
 	// 변수 : 매개변수, 오버로딩, this
 	
@@ -105,10 +108,40 @@ public class User {
 		// -> 필드명과 매개변수명이 같은 경우 이를 구분하기 위해 사용
 	}
 	
+	// 자바는 기본적으로 필드명, 생성자명, 메서드명, 변수명의 중복을 허용하지 않음
+	// private String userId; // Duplicate field User.userId
+	// public User() {} // Duplicate method User() in type User
 	
+	// **오버로딩** //
+	// - 클래스 내에 동일한 이름의 메서드(생성자도 포함)를 여러개 작성하는 기법
+	// [오버로딩 조건]
+	// 1) 메서드의 이름이 동일
+	// 2) 매개변수의 개수, 타입(자료형), 순서 중 1개라도 달라야함
 	
+	// public User() {} // 기본 생성자가 이미 작성되어있어서 오류
+	public User(String userId) {} // 매개변수의 개수가 같은 생성자 없음 -> 오버로드 성립
+	public User(int userAge) {} // 매개변수의 개수는 같지만 타입이 다름 -> 오버로드 성립
+	public User(String userName, int userAge) {} // 매개변수의 개수는 같지만 타입이 다름 -> 오버로드 성립
+	public User(int userAge, String userName) {} // 매개변수의 개수와 타입은 같지만 순서가 다름 -> 오버로드 성립
+	// public User(int userHeight, String userGender) {} // 매개변수의 변수명은 다르지만 타입과 개수가 같은 -> 오버로드 미성립
+
 	
 	// 기능(생성자+메서드)
+	
+	// toString() 메서드 : alt  shift + s + s
+	// Object (최상위 클래스)에 이미 만들어져있는 메서드
+	// 보통 객체의 필드값을 출력하는 용도로 오버라이딩해서 사용함.
+	@Override 
+	public String toString() {
+		return "User [userId=" + userId + ", userPw=" + userPw + ", userName=" + userName + ", userAge=" + userAge
+				+ ", userGender=" + userGender + "]";
+	}
+	// @Override : // @ (어노테이션) : 컴파일러 인식용 주석
+	// 메서드가 부모 클래스의 메서드를 "정확히" 재정의(오버라이딩)했는지 검사
+	// 1. 만약에 오타가 있거나, 부모 클래스에 없는 메서드를 잘못 작성했을 경우에 컴파일 오류 발생
+	// 2. 이 메서드가 부모 클래스를 재정의 했다는 것을 한눈에 알 수 있음
+	
+	
 	
 	/*
 	 * 생성자(constructor)

@@ -132,7 +132,8 @@ public class ClsService /*extends Student*/ {
 				"u3 : %s / %s / %s / %d / %c\n",
 				u3.getUserId(),u3.getUserPw(),u3.getUserName(),u3.getUserAge(),u3.getUserGender());
 		
-		
+		System.out.println(u1);
+		System.out.println(u1.toString());
 		
 	}
 }
