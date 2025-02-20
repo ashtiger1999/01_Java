@@ -82,39 +82,41 @@ public class AbstractionService {
 		
 		People p2 = new People();
 				
-		p2.setMyName("허재호");
-		p2.setMyGender('남');
-		p2.setMypNo("990809-1234567");
-		p2.setMyAddress("인천광역시 연수구 한나루로 105번길 68");
-		p2.setMyPhone("010-2616-4095");
-		p2.setMyAge(27);
+		p2.setName("허재호");
+		p2.setGender('남');
+		p2.setpNo("990809-1234567");
+		p2.setAddress("인천광역시 연수구 한나루로 105번길 68");
+		p2.setPhone("010-2616-4095");
+		p2.setAge(27);
 		
-		System.out.println(p2.getMyName());
-		System.out.println(p2.getMyGender());
-		System.out.println(p2.getMypNo());
-		System.out.println(p2.getMyAddress());
-		System.out.println(p2.getMyPhone());
-		System.out.println(p2.getMyAge());
+		System.out.println(p2.getName());
+		System.out.println(p2.getGender());
+		System.out.println(p2.getpNo());
+		System.out.println(p2.getAddress());
+		System.out.println(p2.getPhone());
+		System.out.println(p2.getAge());
 		
 		System.out.println();
 		
-		p2.setName("김연진");
-		System.out.println(p2.getName());
+		People p3 = new People();
 		
-		p2.setGender('여');
-		System.out.println(p2.getGender());
+		p3.setName("김연진");
+		System.out.println(p3.getName());
 		
-		p2.setpNo("123456-1234567");
-		System.out.println(p2.getpNo());
+		p3.setGender('여');
+		System.out.println(p3.getGender());
 		
-		p2.setAddress("인천광역시 연수구");
-		System.out.println(p2.getAddress());
+		p3.setpNo("123456-1234567");
+		System.out.println(p3.getpNo());
 		
-		p2.setPhone("010-1234-5678");
-		System.out.println(p2.getPhone());
+		p3.setAddress("인천광역시 연수구");
+		System.out.println(p3.getAddress());
 		
-		p2.setAge(20);
-		System.out.println(p2.getAge());
+		p3.setPhone("010-1234-5678");
+		System.out.println(p3.getPhone());
+		
+		p3.setAge(20);
+		System.out.println(p3.getAge());
 		
 		System.out.println();
 	}

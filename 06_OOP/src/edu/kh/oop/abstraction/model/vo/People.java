@@ -86,67 +86,13 @@ public class People { // 국민 (사람) 클래스
 	public void setPhone(String phone) {this.phone=phone;}
 	
 	public int getAge() {return age;}
-	public void setAge(int age) {this.age=age;}
-	
-	// 자동완성 : alt + shift + s/generate getters and setters
-	
-	private String myName;
-	private char myGender;
-	private String mypNo;
-	private String myAddress;
-	private String myPhone;
-	private int myAge;
-
-	public String getMyName() {
-		return myName;
-	}
-
-	public void setMyName(String myName) {
-		this.myName = myName;
-	}
-
-	public char getMyGender() {
-		return myGender;
-	}
-
-	public void setMyGender(char myGender) {
-		this.myGender = myGender;
-	}
-
-	public String getMypNo() {
-		return mypNo;
-	}
-
-	public void setMypNo(String mypNo) {
-		this.mypNo = mypNo;
-	}
-
-	public String getMyAddress() {
-		return myAddress;
-	}
-
-	public void setMyAddress(String myAddress) {
-		this.myAddress = myAddress;
-	}
-
-	public String getMyPhone() {
-		return myPhone;
-	}
-
-	public void setMyPhone(String myPhone) {
-		this.myPhone = myPhone;
-	}
-
-	public int getMyAge() {
-		return myAge;
-	}
-
-	public void setMyAge(int myAge) {
+	public void setAge(int age) {
 		// 메서드(기능) 형태인 getter/setter를 이용하면 본인이 원하는 기능을 추가할 수 있음
 		// age가 0보다 크지 않을 때, 예외 발생 시키기
 		// age가 0보다 클 때, 속성값에 전달받은 값 세팅하기
-		if(myAge>0) {
-			this.myAge = myAge;
+		if(age>0) {
+			// this == 현재 객체
+			this.age = age;
 		} 
 		else {
 			throw new IllegalArgumentException("0 이하 입니다.");
@@ -155,7 +101,5 @@ public class People { // 국민 (사람) 클래스
 		}
 	}
 	
-	
-	
-
+	// 자동완성 : alt + shift + s/generate getters and setters
 }
