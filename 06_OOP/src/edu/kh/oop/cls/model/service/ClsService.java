@@ -111,6 +111,12 @@ public class ClsService /*extends Student*/ {
 		System.out.println(u3.getUserAge());
 		System.out.println(u3.getUserGender());
 		
+		System.out.println();
+		System.out.println(u2.getUserId());
+		System.out.println(u2.getUserPw());
+		System.out.println(u2.getUserName());
+		System.out.println(u2.getUserAge());
+		System.out.println(u2.getUserGender());
 	}
 
 	public void ex4() {

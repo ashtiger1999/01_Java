@@ -7,7 +7,7 @@ public class ClsRun {
 	public static void main(String[] args) {
 
 		ClsService clsServ = new ClsService();
-		clsServ.ex4();
+		clsServ.ex3();
 		
 	}
 
