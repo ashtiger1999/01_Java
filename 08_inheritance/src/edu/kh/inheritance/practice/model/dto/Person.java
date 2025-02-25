@@ -18,8 +18,11 @@ public class Person {
 	public String information() {
 		
 		String str = "이름 : " + name;
+		str += " / 나이 : " + age;
 		str += " / 신장 : " + height;
 		str += " / 몸무게 : " + weight;
+		
+		str = String.format("이름 : %s / 나이 : %d / 신장 : %f / 몸무게 : %f", name,age,height,weight);
 
 		return str;
 		
