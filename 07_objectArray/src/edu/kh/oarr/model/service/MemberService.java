@@ -238,9 +238,11 @@ public class MemberService {
 	// 로그아웃
 	public void logout() {
 		
+		if(loginMember==null) System.out.println("\n // 로그인중인 계정이 없습니다.");
+		
 		loginMember=null;
 		
-		System.out.println(" // 로그아웃 되셨습니다.");
+		System.out.println("\n // 로그아웃 되셨습니다.");
 		
 	}
 	
