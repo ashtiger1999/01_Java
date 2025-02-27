@@ -358,12 +358,12 @@ public class StudentService {
 		System.out.println(studentList.get(index));
 
 		System.out.print("\n정말 삭제하시겠습니까?(Y/N) : ");
-		char ch = sc.next().charAt(0);
+		char ch = sc.next().toUpperCase().charAt(0);
 
-		if (ch == 'y' || ch == 'Y') {
+		if (ch == 'Y') {
 			Student remove = studentList.remove(index);
 			return remove.getName() + "의 정보가 삭제되었습니다.";
-		} else if (ch == 'n' || ch == 'N')
+		} else if (ch == 'N')
 			return "취소";
 		else
 			return "Err : 입력 형식이 유효하지 않습니다. 다시 시도해주세요.";
