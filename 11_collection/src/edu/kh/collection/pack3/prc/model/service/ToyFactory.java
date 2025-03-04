@@ -1,7 +1,11 @@
 package edu.kh.collection.pack3.prc.model.service;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
+
+import edu.kh.collection.pack3.prc.model.dto.Toy;
 
 public class ToyFactory {
 
@@ -9,7 +13,10 @@ public class ToyFactory {
 	private List<Toy> toyList = new ArrayList<>();
 	
 	public ToyFactory() {
-		// TODO Auto-generated constructor stub
+		toyList.add(new Toy("Mommy Long Legs",36000,"pink",5,19940505,null));
+		toyList.add(new Toy("Mommy Long Legs",36000,"pink",5,19940505,null));
+		toyList.add(new Toy("Mommy Long Legs",36000,"pink",5,19940505,null));
+		toyList.add(new Toy("Mommy Long Legs",36000,"pink",5,19940505,null));
 	}
 
 	public void displayMenu() {
