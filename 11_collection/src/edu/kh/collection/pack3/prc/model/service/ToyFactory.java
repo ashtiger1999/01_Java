@@ -34,7 +34,14 @@ public class ToyFactory {
 	
 	public void test() {
 		
-		for ( Toy item : toys) System.out.println(item.getName());
+		System.out.print("n : ");
+		String str = sc.next();
+		
+		for (Integer key : materials.keySet()) {
+			if(str.equals(materials.get(key))){
+				System.out.println("added");
+			}
+		}
 		
 	}
 
