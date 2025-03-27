@@ -107,7 +107,6 @@ public class ByteService {
 			
 				// 사용완료한 스트림을 제거(닫기, 메모리 반환)하는 코드를 작성
 				// -> 메모리 누수 방지
-						
 				try {
 					// 스트림이 정상 생성된 경우
 					// 스트림을 닫는다(NullPointException 방지)
@@ -455,5 +454,45 @@ public class ByteService {
 			}
 		}
 
+	}
+	
+	public void output1() {
+		// 기반 스트림 객체 선언
+		FileOutputStream fos = null;
+		// 출력 성능 향상을 위한 보조 스트림 선언
+		BufferedOutputStream bos = null;
+		
+		try {
+			// 기반 스트림 생성
+			fos = new FileOutputStream("text.txt");
+			// 보조 스트림 생성
+			bos = new BufferedOutputStream(fos);
+			
+			// 문자열 반복 변형을 위한 StringBuilder 객체 생성
+			StringBuilder sb = new StringBuilder();
+			// 문자열 변형
+			sb.append("안녕하세요!");
+			
+			// 문자열 반복 변형 완료 후 String 자료형 문자열로 변환
+			String str = sb.toString();
+			
+			// String 문자열을 byte[]로 변환 후 출력
+			bos.write(str.getBytes());
+			// 출력후 잔존 데이터 밀어내기
+			bos.flush();
+						
+		}catch(IOException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(bos != null) { // 보조 스트림이 생성되있는 경우 if문 실행
+					// 보조 스트림 bos 닫기 -> 보조 스트림을 닫으면 기반 스트림도 닫힘
+					bos.close();
+				}
+				
+			}catch(IOException e) { // 스트림을 닫는 과정에서 발생하는 IOException 처리
+				e.printStackTrace();
+			}
+		}
 	}
 }

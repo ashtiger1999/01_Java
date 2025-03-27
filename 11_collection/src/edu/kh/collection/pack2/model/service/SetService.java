@@ -128,7 +128,8 @@ public class SetService {
 			
 			// E Iterator.next() : 다음 요소를 꺼내와 반환
 			String temp = it.next();
-			System.out.println(temp);
+			// System.out.println(temp);
+			System.out.println(it.next());
 		}
 		
 		System.out.println("----------------------------------------------------------");

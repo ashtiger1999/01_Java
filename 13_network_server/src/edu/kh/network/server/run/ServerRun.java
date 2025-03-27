@@ -7,8 +7,17 @@ public class ServerRun {
 	public static void main(String[] args) {
 
 		ServerService service = new ServerService();
-		service.serverStart();
+		// service.serverStart();
+		
+		String str = "hello";
+		System.out.println(Integer.toHexString(System.identityHashCode(str)));
+
+		str = "world";
+		System.out.println(Integer.toHexString(System.identityHashCode(str)));
+
+		
 		
 	}
 
 }
+

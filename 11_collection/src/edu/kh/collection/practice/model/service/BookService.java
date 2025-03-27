@@ -67,6 +67,8 @@ public class BookService {
 					break;
 				default:
 					System.out.println("잘못 입력하셨습니다.");
+					sc.nextLine();
+					menuNum=-1;
 				}
 
 			} catch (Exception e) {

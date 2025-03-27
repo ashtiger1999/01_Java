@@ -32,7 +32,8 @@ public class ByteRun {
 		// service.bufferFileByteOutput();
 		// service.bufferedFileByteInput();
 		// service.readProperties();
-		service.fileCopy();
+		// service.fileCopy();
+		service.output1();
 		
 	}
 
